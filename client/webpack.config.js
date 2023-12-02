@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
-const { InjectManifest } = require('workbox-webpack-plugin');
+const {InjectManifest} = require('workbox-webpack-plugin');
 
 module.exports = () => {
   return {
@@ -68,7 +68,7 @@ module.exports = () => {
       
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'J.A.T.E.'
+        title: 'J.A.T.E'
       }),
 
       new InjectManifest({
@@ -80,7 +80,7 @@ module.exports = () => {
         fingerprints: false,
         inject: true,
         name: 'Just Another Text Editor',
-        short_name: 'J.A.T.E.',
+        short_name: 'J.A.T.E',
         description: 'Text Editor for Texts',
         background_color: '#225ca3',
         theme_color: '#225ca3',
@@ -92,10 +92,8 @@ module.exports = () => {
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
           },
-        ]
-      })
-
-
+        ],
+      }),
     ],
 
     module: {
